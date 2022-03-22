@@ -1,0 +1,42 @@
+<html>
+
+<head>
+  <title>Express</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+  <h1>Express</h1>
+  <p>Welcome to Express</p>
+</body>
+<script>
+(async () => {
+  const rawResponse = await fetch('http://127.0.0.1:3001/sign', {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({data: '2017-05-18;2018-05-18T11:22:19;FAC 002/18;53.002;aBVwQ8vjrJ+psIEPP+j++4hXf8RxDmE0Yr35J3a68OKp+aLeWS…q7VRdGTfnV5B4Y5vuwvstoyR2pEQGWQXBwrh/6u2QZ88iLg==', "privateKey":"MIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDCE4UKeNGqM1ih2y1jSNdDtGSxSS19fSVYOZQ3xqgbTgEymlwuIRzggJIhpIVipPaQQ2dwtwmPNNJTQb2KKTzKhtxeC0N0wRjor2x0ld5f0u7gNVHgsYD1xu+Tp6tWJ+x9m8gtmaKAf86US1hz8BVsOULkUeopkvI9E58U4/fJe70ApFlGjPnRJPXBudMZLIyXDC6UtkC+NOOHHrgw2ZXhf0kqGHkmvM7xSYYKaW92ZPtududLbJtp9yE7cAWAHzz8ccQ45Jr/GrOLhrWRPDCNtI1qBHOgOHlbwI80XyWHNiyrpKSutTE442+4no4pqTquxQjUKbw0Mnh+WWW924tRAgMBAAECggEBAJ5kbe1JA90DwO+AQP/J4B4aqR9j2OOU8piZjZUj5ek69ZFGF7tyPO4hIKKiclY6yhydVlvQltWwx4M5oSaUV0/3VvzN9oTgX6LwIPTZp77PGTQVcDiQxe5RKRB6BETxmno9XNeSjuSO6ptvDsa4h9NmvGg5ToIVsuwUCn5zO7TMgJ+M60TrlA+w4QRBYnBKl27ePJ2pVYldLtf71aENRMyw9NfIe8RBw4MlfuaoSZ95+qnDgTywpVurEL0/IyIUL/tLzqc7gtfZ7anuW4UkH5S9ae26xjgrqc4p60x1+HxFTMn5xwCF8trgobgNNA0Ug9Cx9AkgnlZOBE20stVVzl0CgYEA/HrbUQdfg3yjwDwqJDvpS44zyAQyJIeu3JQdf90keESBz+kdai4gZK95AYIOVyy7OpgxhySC/MeBTmOY3/Bf6xy2TPvxEry1b1EcKbZh28QVa9xYVlsOO6GWewo0pqhhkzeOLZhRrFPTDbNmHgT3WyYeNYC+LHwxUaO0LQ9IJycCgYEAxMg14sa89mN9mgbVudX6W0oclSndz/mSj60UbJVXXTZsPj25eab3HWaLOj7B5ElloC1YgFQpdnK2A6k1ftZwKRB9i/xyXwnt0IqYPPOrypsHIxHoOrhRJflc4JxSErD9OrHcU8OHteu26VLB5v0E61ECH6zSzDeB5xa3lCfjhMcCgYEA8lkPSbD1GqY6HFzj6pHjdtXRmG2GoA/pZet6gXCJADRqEmLmDDSofVz9ntfy4fSa5zyNVfZTEUaDNPZfGJ2HxItz5WN0XJLs6SQHD3b0adnG4hjIZmPSvqR1aDc8oLhBqOkLvXJW+z4e+Si5nZkQwdpN5vdkFBlF0eJ8IUBo9sMCgYBNDZB8EhHf8Kk37ME3mWAE6woyJkiirTkEZWN/+SJSb4MHBChiSEyvCH4v+m71sv/GLrte1JW/ub8nw9QcrF8S1VAzxlAKgtrKM9rU0x1LolSzGMn0ZEPyOKhzkwJYK1Gc8BQ0AHZdd8URq8QdbKnGctwABy4rpPiKwkx0CQJ/9QKBgQCRigXbXZCs/MF8z5EnnRpBb3Mzfi8hMvfqAYv4qaEEzodaJT1qBxaGrZSFdjOx6in3Buic9zZ/htzUfgvydJNQEDJGY/4ComPPOD50Q3ZsD+Q2R4rZ/THT1wCQUCjOS0Jju2oj2WzJsa0DmAVZY36I1ycPtm/BoHHODqTR8W+bEQ=="})
+  });
+  const content = await rawResponse.json();
+
+  console.log(content);
+})();
+/*
+aBVwQ8vjrJ+psIEPP+j++4hXf8RxDmE0Yr35J3a68OKp+aLeWS…q7VRdGTfnV5B4Y5vuwvstoyR2pEQGWQXBwrh/6u2QZ88iLg==
+(async () => {
+  const rawResponse = await fetch('http://127.0.0.1:3001/verify', {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({data: 'oi', "publicKey":"MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwhOFCnjRqjNYodstY0jXQ7RksUktfX0lWDmUN8aoG04BMppcLiEc4ICSIaSFYqT2kENncLcJjzTSU0G9iik8yobcXgtDdMEY6K9sdJXeX9Lu4DVR4LGA9cbvk6erVifsfZvILZmigH/OlEtYc/AVbDlC5FHqKZLyPROfFOP3yXu9AKRZRoz50ST1wbnTGSyMlwwulLZAvjTjhx64MNmV4X9JKhh5JrzO8UmGCmlvdmT7bnbnS2ybafchO3AFgB88/HHEOOSa/xqzi4a1kTwwjbSNagRzoDh5W8CPNF8lhzYsq6SkrrUxOONvuJ6OKak6rsUI1Cm8NDJ4flllvduLUQIDAQAB","signature": "aeSjC/p4telwcElBh8eYmtkfAsGiF0s9BQpOOzHwmHDPgC3FuWwiw8dha5Qh6xPmqoF5zqlbPZM2yZg9+o8xJzbV0pG3KQLRJeLn/gy2Zi1te5oLlX9JOsGmjC4p58EV47vZBqSoIX5p3kiuXBoCuqCuc9oiMroCDaYhEM5MzeXWYJbzAM14b33k573AN9Gtn2GFbfTOnsY2G/JxL7WRGSa293h3/fBcAZZoQPCbrBlyRc13+eSTf/jTkCcQEn8DVw4Aa3Xuz2gNpVgIMz1iDUYGQqN75i3EnsGGKQWQMAHCZY/QEP1KsWBUF2tzuTQK0YxbfLzR0dJXu1NNFAHPFw=="})
+  });
+  const content = await rawResponse.json();
+
+  console.log(content);
+})();*/
+</script>
+</html>
